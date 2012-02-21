@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA22DD9F14F186CC00572251 /* DrinkListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA22DD9E14F186CC00572251 /* DrinkListView.m */; };
+		BA22DDA214F186DB00572251 /* DrinkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA22DDA114F186DB00572251 /* DrinkListViewController.m */; };
+		BA2B59AE14F3668C004A291E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2B59AD14F3668C004A291E /* logo.png */; };
+		BA2B59B014F3668F004A291E /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2B59AF14F3668F004A291E /* logosmall.png */; };
+		BA38F08614F21E6600555C71 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38F08514F21E6600555C71 /* DropView.m */; };
+		BA445AAC14F23014007C660A /* DropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA445AAB14F23013007C660A /* DropViewController.m */; };
+		BA4F1BFA14F1DA5E00C03CA8 /* DrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4F1BF914F1DA5E00C03CA8 /* DrinkCell.m */; };
+		BA4F1BFF14F1DA8300C03CA8 /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA4F1BFE14F1DA8300C03CA8 /* DrinkCell.xib */; };
+		BA8DF45014F3367800516CE0 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA8DF44F14F3367800516CE0 /* UserInfo.plist */; };
+		BADA5AAB14F1567800055344 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAA14F1567800055344 /* UIKit.framework */; };
+		BADA5AAD14F1567800055344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAC14F1567800055344 /* Foundation.framework */; };
+		BADA5AAF14F1567800055344 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAE14F1567800055344 /* CoreGraphics.framework */; };
+		BADA5AB514F1567800055344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BADA5AB314F1567800055344 /* InfoPlist.strings */; };
+		BADA5AB714F1567800055344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5AB614F1567800055344 /* main.m */; };
+		BADA5ABB14F1567800055344 /* DrinkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5ABA14F1567800055344 /* DrinkAppDelegate.m */; };
+		BADA5ABE14F1567800055344 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA5ABC14F1567800055344 /* MainStoryboard.storyboard */; };
+		BADA5AC114F1567800055344 /* DrinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5AC014F1567800055344 /* DrinkViewController.m */; };
+		BADA5ACD14F159A700055344 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5ACC14F159A700055344 /* LoginView.m */; };
+		BADA5AD414F15AA300055344 /* NSStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5AD314F15AA300055344 /* NSStreamAdditions.m */; };
+		BADA5AD714F15E9000055344 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5AD614F15E9000055344 /* LoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA22DD9D14F186CC00572251 /* DrinkListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkListView.h; path = ../DrinkListView.h; sourceTree = "<group>"; };
+		BA22DD9E14F186CC00572251 /* DrinkListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkListView.m; path = ../DrinkListView.m; sourceTree = "<group>"; };
+		BA22DDA014F186DA00572251 /* DrinkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkListViewController.h; path = ../DrinkListViewController.h; sourceTree = "<group>"; };
+		BA22DDA114F186DB00572251 /* DrinkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkListViewController.m; path = ../DrinkListViewController.m; sourceTree = "<group>"; };
+		BA2B59AD14F3668C004A291E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		BA2B59AF14F3668F004A291E /* logosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logosmall.png; sourceTree = "<group>"; };
+		BA38F08414F21E6600555C71 /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropView.h; path = ../DropView.h; sourceTree = "<group>"; };
+		BA38F08514F21E6600555C71 /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropView.m; path = ../DropView.m; sourceTree = "<group>"; };
+		BA445AAA14F23013007C660A /* DropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropViewController.h; path = ../DropViewController.h; sourceTree = "<group>"; };
+		BA445AAB14F23013007C660A /* DropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropViewController.m; path = ../DropViewController.m; sourceTree = "<group>"; };
+		BA4F1BF814F1DA5E00C03CA8 /* DrinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkCell.h; path = ../DrinkCell.h; sourceTree = "<group>"; };
+		BA4F1BF914F1DA5E00C03CA8 /* DrinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkCell.m; path = ../DrinkCell.m; sourceTree = "<group>"; };
+		BA4F1BFE14F1DA8300C03CA8 /* DrinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DrinkCell.xib; path = ../DrinkCell.xib; sourceTree = "<group>"; };
+		BA8DF44F14F3367800516CE0 /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserInfo.plist; path = ../UserInfo.plist; sourceTree = "<group>"; };
+		BADA5AA614F1567800055344 /* Drink5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drink5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADA5AAA14F1567800055344 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BADA5AAC14F1567800055344 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BADA5AAE14F1567800055344 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BADA5AB214F1567800055344 /* Drink5-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Drink5-Info.plist"; sourceTree = "<group>"; };
+		BADA5AB414F1567800055344 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BADA5AB614F1567800055344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BADA5AB814F1567800055344 /* Drink5-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drink5-Prefix.pch"; sourceTree = "<group>"; };
+		BADA5AB914F1567800055344 /* DrinkAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkAppDelegate.h; sourceTree = "<group>"; };
+		BADA5ABA14F1567800055344 /* DrinkAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkAppDelegate.m; sourceTree = "<group>"; };
+		BADA5ABD14F1567800055344 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BADA5ABF14F1567800055344 /* DrinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkViewController.h; sourceTree = "<group>"; };
+		BADA5AC014F1567800055344 /* DrinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkViewController.m; sourceTree = "<group>"; };
+		BADA5ACB14F159A700055344 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		BADA5ACC14F159A700055344 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		BADA5AD214F15AA300055344 /* NSStreamAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStreamAdditions.h; sourceTree = "<group>"; };
+		BADA5AD314F15AA300055344 /* NSStreamAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStreamAdditions.m; sourceTree = "<group>"; };
+		BADA5AD514F15E9000055344 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		BADA5AD614F15E9000055344 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BADA5AA314F1567800055344 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADA5AAB14F1567800055344 /* UIKit.framework in Frameworks */,
+				BADA5AAD14F1567800055344 /* Foundation.framework in Frameworks */,
+				BADA5AAF14F1567800055344 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BADA5A9B14F1567500055344 = {
+			isa = PBXGroup;
+			children = (
+				BA2B59AF14F3668F004A291E /* logosmall.png */,
+				BA2B59AD14F3668C004A291E /* logo.png */,
+				BADA5AB014F1567800055344 /* Drink5 */,
+				BADA5AA914F1567800055344 /* Frameworks */,
+				BADA5AA714F1567800055344 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BADA5AA714F1567800055344 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BADA5AA614F1567800055344 /* Drink5.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BADA5AA914F1567800055344 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BADA5AAA14F1567800055344 /* UIKit.framework */,
+				BADA5AAC14F1567800055344 /* Foundation.framework */,
+				BADA5AAE14F1567800055344 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BADA5AB014F1567800055344 /* Drink5 */ = {
+			isa = PBXGroup;
+			children = (
+				BADA5ABC14F1567800055344 /* MainStoryboard.storyboard */,
+				BADA5ABF14F1567800055344 /* DrinkViewController.h */,
+				BADA5AC014F1567800055344 /* DrinkViewController.m */,
+				BADA5AD514F15E9000055344 /* LoginViewController.h */,
+				BADA5AD614F15E9000055344 /* LoginViewController.m */,
+				BADA5ACB14F159A700055344 /* LoginView.h */,
+				BADA5ACC14F159A700055344 /* LoginView.m */,
+				BA22DDA014F186DA00572251 /* DrinkListViewController.h */,
+				BA22DDA114F186DB00572251 /* DrinkListViewController.m */,
+				BA22DD9D14F186CC00572251 /* DrinkListView.h */,
+				BA22DD9E14F186CC00572251 /* DrinkListView.m */,
+				BA4F1BFE14F1DA8300C03CA8 /* DrinkCell.xib */,
+				BA445AAA14F23013007C660A /* DropViewController.h */,
+				BA445AAB14F23013007C660A /* DropViewController.m */,
+				BA38F08414F21E6600555C71 /* DropView.h */,
+				BA38F08514F21E6600555C71 /* DropView.m */,
+				BA4F1BF814F1DA5E00C03CA8 /* DrinkCell.h */,
+				BA4F1BF914F1DA5E00C03CA8 /* DrinkCell.m */,
+				BADA5AD214F15AA300055344 /* NSStreamAdditions.h */,
+				BADA5AD314F15AA300055344 /* NSStreamAdditions.m */,
+				BADA5AB914F1567800055344 /* DrinkAppDelegate.h */,
+				BADA5ABA14F1567800055344 /* DrinkAppDelegate.m */,
+				BA8DF44F14F3367800516CE0 /* UserInfo.plist */,
+				BADA5AB114F1567800055344 /* Supporting Files */,
+			);
+			path = Drink5;
+			sourceTree = "<group>";
+		};
+		BADA5AB114F1567800055344 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BADA5AB214F1567800055344 /* Drink5-Info.plist */,
+				BADA5AB314F1567800055344 /* InfoPlist.strings */,
+				BADA5AB614F1567800055344 /* main.m */,
+				BADA5AB814F1567800055344 /* Drink5-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BADA5AA514F1567800055344 /* Drink5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADA5AC414F1567800055344 /* Build configuration list for PBXNativeTarget "Drink5" */;
+			buildPhases = (
+				BADA5AA214F1567800055344 /* Sources */,
+				BADA5AA314F1567800055344 /* Frameworks */,
+				BADA5AA414F1567800055344 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Drink5;
+			productName = Drink5;
+			productReference = BADA5AA614F1567800055344 /* Drink5.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BADA5A9D14F1567500055344 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = BADA5AA014F1567500055344 /* Build configuration list for PBXProject "Drink5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BADA5A9B14F1567500055344;
+			productRefGroup = BADA5AA714F1567800055344 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BADA5AA514F1567800055344 /* Drink5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BADA5AA414F1567800055344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADA5AB514F1567800055344 /* InfoPlist.strings in Resources */,
+				BADA5ABE14F1567800055344 /* MainStoryboard.storyboard in Resources */,
+				BA4F1BFF14F1DA8300C03CA8 /* DrinkCell.xib in Resources */,
+				BA8DF45014F3367800516CE0 /* UserInfo.plist in Resources */,
+				BA2B59AE14F3668C004A291E /* logo.png in Resources */,
+				BA2B59B014F3668F004A291E /* logosmall.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BADA5AA214F1567800055344 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADA5AB714F1567800055344 /* main.m in Sources */,
+				BADA5ABB14F1567800055344 /* DrinkAppDelegate.m in Sources */,
+				BADA5AC114F1567800055344 /* DrinkViewController.m in Sources */,
+				BADA5ACD14F159A700055344 /* LoginView.m in Sources */,
+				BADA5AD414F15AA300055344 /* NSStreamAdditions.m in Sources */,
+				BADA5AD714F15E9000055344 /* LoginViewController.m in Sources */,
+				BA22DD9F14F186CC00572251 /* DrinkListView.m in Sources */,
+				BA22DDA214F186DB00572251 /* DrinkListViewController.m in Sources */,
+				BA4F1BFA14F1DA5E00C03CA8 /* DrinkCell.m in Sources */,
+				BA38F08614F21E6600555C71 /* DropView.m in Sources */,
+				BA445AAC14F23014007C660A /* DropViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BADA5AB314F1567800055344 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADA5AB414F1567800055344 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BADA5ABC14F1567800055344 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADA5ABD14F1567800055344 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BADA5AC214F1567800055344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BADA5AC314F1567800055344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BADA5AC514F1567800055344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Drink5/Drink5-Prefix.pch";
+				INFOPLIST_FILE = "Drink5/Drink5-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BADA5AC614F1567800055344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Drink5/Drink5-Prefix.pch";
+				INFOPLIST_FILE = "Drink5/Drink5-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BADA5AA014F1567500055344 /* Build configuration list for PBXProject "Drink5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA5AC214F1567800055344 /* Debug */,
+				BADA5AC314F1567800055344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADA5AC414F1567800055344 /* Build configuration list for PBXNativeTarget "Drink5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA5AC514F1567800055344 /* Debug */,
+				BADA5AC614F1567800055344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BADA5A9D14F1567500055344 /* Project object */;
+}
