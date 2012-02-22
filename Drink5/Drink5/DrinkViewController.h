@@ -14,6 +14,8 @@
     NSOutputStream *outputStream;
     
 }
+@property (weak, nonatomic) IBOutlet UILabel *connectingStatus;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, retain) NSInputStream *inputStream;
 @property (nonatomic, retain) NSOutputStream *outputStream;
 

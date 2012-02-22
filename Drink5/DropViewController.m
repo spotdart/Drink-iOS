@@ -9,6 +9,9 @@
 #import "DropViewController.h"
 
 @implementation DropViewController
+@synthesize itemIcon;
+@synthesize statusSpinner;
+@synthesize statusField;
 @synthesize nameLabel;
 
 @synthesize drinkName;
@@ -18,6 +21,8 @@
 @synthesize slotToDrop;
 
 - (IBAction)drop:(id)sender {
+    [statusSpinner startAnimating];
+    statusField.text = @"dispensing...";
     [dropSource dropFromSlot:slotToDrop];
 }
 
@@ -32,6 +37,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     nameLabel.text = drinkName;
+    statusSpinner.hidesWhenStopped = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,6 +68,9 @@
 - (void)viewDidUnload
 {
     [self setNameLabel:nil];
+    [self setStatusField:nil];
+    [self setStatusSpinner:nil];
+    [self setItemIcon:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

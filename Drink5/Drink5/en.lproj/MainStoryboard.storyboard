@@ -13,18 +13,24 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Connecting" lineBreakMode="tailTruncation" minimumFontSize="10" id="pF4-3T-ORE">
-                                <rect key="frame" x="116" y="197" width="88" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Connecting...." lineBreakMode="tailTruncation" minimumFontSize="10" id="pF4-3T-ORE">
+                                <rect key="frame" x="130" y="197" width="225" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="qzP-oZ-5ED">
+                                <rect key="frame" x="102" y="197" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Jk-rK-mlk"/>
                     <connections>
+                        <outlet property="connectingStatus" destination="pF4-3T-ORE" id="Ybv-vg-qnU"/>
+                        <outlet property="spinner" destination="qzP-oZ-5ED" id="mSW-qP-ebb"/>
                         <segue destination="M62-WB-qa9" kind="push" identifier="TransitionToLogin" id="968-CA-IMp"/>
                     </connections>
                 </viewController>
@@ -129,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wk7-oZ-DL3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -161,7 +167,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Make Your Selection" id="L1s-zK-oAl">
+                    <navigationItem key="navigationItem" title="Choices" id="L1s-zK-oAl">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="prn-HM-BXI">
                             <connections>
                                 <action selector="logout:" destination="6bu-HK-DmI" id="Bgj-AV-J8w"/>
@@ -185,10 +191,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5fe-aD-ggD">
-                                <rect key="frame" x="39" y="190" width="241" height="37"/>
+                                <rect key="frame" x="84" y="214" width="153" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Drop it like a red-headed baby">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" title="Dispense">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -199,10 +205,32 @@
                                     <action selector="drop:" destination="duX-he-AH7" eventType="touchUpInside" id="V99-6K-ejX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Coke" lineBreakMode="tailTruncation" minimumFontSize="10" id="TRH-Hy-0nf">
-                                <rect key="frame" x="67" y="63" width="186" height="93"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="TRH-Hy-0nf">
+                                <rect key="frame" x="104" y="63" width="186" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="29"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" text="" lineBreakMode="tailTruncation" numberOfLines="4" minimumFontSize="10" id="cWf-df-wbB">
+                                <rect key="frame" x="67" y="153" width="223" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="ArY-r7-niu">
+                                <rect key="frame" x="39" y="175" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="53S-zd-MwN">
+                                <rect key="frame" x="20" y="74" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You've Selected..." lineBreakMode="tailTruncation" minimumFontSize="10" id="AJm-DM-nEB">
+                                <rect key="frame" x="20" y="25" width="195" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -211,7 +239,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="wsU-A2-DK2"/>
                     <connections>
+                        <outlet property="itemIcon" destination="53S-zd-MwN" id="lee-nP-pbE"/>
                         <outlet property="nameLabel" destination="TRH-Hy-0nf" id="n0A-Kz-oTO"/>
+                        <outlet property="statusField" destination="cWf-df-wbB" id="6jJ-u0-EuN"/>
+                        <outlet property="statusSpinner" destination="ArY-r7-niu" id="78t-y3-l8O"/>
                     </connections>
                 </viewController>
             </objects>
@@ -235,6 +266,57 @@
             <point key="canvasLocation" x="204" y="337"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DrinkListView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkListView.h"/>
+        </class>
+        <class className="DrinkListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="drinkCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="drinkName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="drinkPrice" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="drinkQuantity" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="drinkThumbnail" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="drinkThumbnailOverlay" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="listSource"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="DrinkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="connectingStatus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="DropView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DropView.h"/>
+        </class>
+        <class className="DropViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DropViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dropSource"/>
+                <relationship kind="outlet" name="itemIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statusField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statusSpinner" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="LoginView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginView.h"/>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="ErrorField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="loginSource"/>
+                <relationship kind="outlet" name="passField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="rememberMe" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="userField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

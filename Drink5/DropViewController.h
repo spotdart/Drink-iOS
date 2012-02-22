@@ -14,7 +14,13 @@
     NSString *drinkName;
     UILabel *nameLabel;
     NSInteger slotToDrop;
+    UIActivityIndicatorView *statusSpinner;
+    UIImageView *itemIcon;
 }
+
+@property (strong, nonatomic) IBOutlet UIImageView *itemIcon;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *statusSpinner;
+@property (strong, nonatomic) IBOutlet UILabel *statusField;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) NSString *drinkName;
 

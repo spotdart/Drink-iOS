@@ -10,6 +10,7 @@
 #import "NSStreamAdditions.h"
 #import "DrinkViewController.h"
 #import "DrinkListViewController.h"
+#import "DropViewController.h"
 
 @interface DrinkViewController() <DrinkLoginSource, DrinkListSource, DropSource>
 @end
@@ -17,16 +18,20 @@
 @implementation DrinkViewController
 
 BOOL suppressReset = NO;
+BOOL loggedIn = NO;
 
 NSMutableData *data;
 NSInteger balance;
 
+@synthesize connectingStatus;
+@synthesize spinner;
 @synthesize inputStream;
 @synthesize outputStream;
 
 
 LoginViewController *loginViewController;
 DrinkListViewController *drinkListViewController;
+DropViewController *dropViewController;
 
 
 -(void) writeToServer:(NSString*)string {
@@ -75,6 +80,14 @@ DrinkListViewController *drinkListViewController;
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode {
     NSStreamStatus status = [stream streamStatus];
     switch(eventCode) {
+        case NSStreamEventErrorOccurred:
+        {
+            NSLog(@"Error Occurred");
+            connectingStatus.text = @"Can't Connect!";
+            spinner.hidesWhenStopped = YES;
+            [spinner stopAnimating];
+            break;
+        }
         case NSStreamEventHasSpaceAvailable:
         {
             outputStream = stream;
@@ -106,35 +119,54 @@ DrinkListViewController *drinkListViewController;
                 }
                 if ([received isEqualToString:@"OK:  Welcome to Big Drink\r\n"]) {
                     [self getDrinkStats];
+                    [drinkListViewController setMachineName:@"Big Drink"];
                     //connected well!
                 }
                 if ([received isEqualToString:@"OK:  Welcome to Snack\r\n"]) {
                     [self getDrinkStats];
+                    [drinkListViewController setMachineName:@"Snack"];
                     //connected well!
                 }
                 if ([received isEqualToString:@"OK:  Welcome to Little Drink\r\n"]) {
                     [self getDrinkStats];
+                    [drinkListViewController setMachineName:@"Little Drink"];
+                    //connected well!
+                }
+                if ([received isEqualToString:@"OK:  Dropping drink\r\n"]) {
+                    dropViewController.statusField.text = @"Come and get it!";
+                    dropViewController.statusField.textColor = [UIColor colorWithRed:0.0 green:.67451 blue:.113725 alpha:1.0];
+                    [dropViewController.statusSpinner stopAnimating];
                     //connected well!
                 }
 
                 if ([received isEqualToString:@"ERR 407 Invalid password.\r\n"]) {
                     [loginViewController wrongPass];
                     NSLog(@"Invalid password");
-                } else {
+                } 
                     NSError *error = NULL;	
                     NSRegularExpression *loginRegex = [NSRegularExpression regularExpressionWithPattern:@"OK: [0-9]+" options:nil error:&error];
                     NSRange rangeOfFirstMatch = [loginRegex rangeOfFirstMatchInString:received options:0 range:NSMakeRange(0, [received length])];
                     if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0)))
                     {
-                        [loginViewController rightPass];
+                        if (loggedIn == NO) {
+                            [loginViewController rightPass];
+                        }
+                        loggedIn = YES;
                         NSArray *array = [[NSArray alloc] initWithArray:[received componentsSeparatedByString:@" "]];
                         balance = [[array objectAtIndex:1] intValue];
                         [drinkListViewController setBalance:balance];
                     }
-                }	
-                NSError *error = NULL;
+                NSRegularExpression *errorRegex = [NSRegularExpression regularExpressionWithPattern:@"ERR.*" options:nil error:&error];
+                rangeOfFirstMatch = [errorRegex rangeOfFirstMatchInString:received options:0 range:NSMakeRange(0, [received length])];
+                if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0)))
+                {
+                    dropViewController.statusField.text = received;
+                    dropViewController.statusField.textColor = [UIColor redColor];
+                }
+                	
+                //NSError *error = NULL;
                 NSRegularExpression *slotRegex = [NSRegularExpression regularExpressionWithPattern:@"1 \".*" options:nil error:&error];
-                NSRange rangeOfFirstMatch = [slotRegex rangeOfFirstMatchInString:received options:0 range:NSMakeRange(0, [received length])];
+                rangeOfFirstMatch = [slotRegex rangeOfFirstMatchInString:received options:0 range:NSMakeRange(0, [received length])];
                     if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0)))[drinkListViewController setSlotStats:received];
             }        
         } break;
@@ -153,6 +185,7 @@ DrinkListViewController *drinkListViewController;
 {
     [inputStream close];
     [outputStream close];
+    [spinner startAnimating];
     [self connectToServerUsingStream:@"drink.csh.rit.edu" portNo:4242];
     [super viewDidLoad];
 }
@@ -171,7 +204,7 @@ DrinkListViewController *drinkListViewController;
 }
 
 - (void)getBalance:(id)sender {
-    //[self writeToServer:@"getbalance"];
+    [self writeToServer:@"getbalance"];
      }
 
 - (void)switchMachine:(id)sender: (NSString *)machine {
@@ -182,6 +215,10 @@ DrinkListViewController *drinkListViewController;
 - (void)dropFromSlot:(NSInteger)slotToDrop {
    [self writeToServer:[NSString stringWithFormat:@"drop %d 0", slotToDrop]];
 }
-    
 
+- (void)viewDidUnload {
+    [self setSpinner:nil];
+    [self setConnectingStatus:nil];
+    [super viewDidUnload];
+}
 @end

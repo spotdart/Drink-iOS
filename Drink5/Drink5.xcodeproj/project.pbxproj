@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA17C44F14F3A3BE00B95509 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = BA17C44E14F3A3BE00B95509 /* icons */; };
+		BA17C45114F3B9B100B95509 /* grayedOut.png in Resources */ = {isa = PBXBuildFile; fileRef = BA17C45014F3B9B100B95509 /* grayedOut.png */; };
 		BA22DD9F14F186CC00572251 /* DrinkListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA22DD9E14F186CC00572251 /* DrinkListView.m */; };
 		BA22DDA214F186DB00572251 /* DrinkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA22DDA114F186DB00572251 /* DrinkListViewController.m */; };
-		BA2B59AE14F3668C004A291E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2B59AD14F3668C004A291E /* logo.png */; };
-		BA2B59B014F3668F004A291E /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2B59AF14F3668F004A291E /* logosmall.png */; };
 		BA38F08614F21E6600555C71 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38F08514F21E6600555C71 /* DropView.m */; };
 		BA445AAC14F23014007C660A /* DropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA445AAB14F23013007C660A /* DropViewController.m */; };
 		BA4F1BFA14F1DA5E00C03CA8 /* DrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4F1BF914F1DA5E00C03CA8 /* DrinkCell.m */; };
 		BA4F1BFF14F1DA8300C03CA8 /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA4F1BFE14F1DA8300C03CA8 /* DrinkCell.xib */; };
+		BA61245914F410EC00CD9A87 /* logo114.png in Resources */ = {isa = PBXBuildFile; fileRef = BA61245814F410EC00CD9A87 /* logo114.png */; };
+		BA61245A14F4116B00CD9A87 /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2B59AF14F3668F004A291E /* logosmall.png */; };
+		BA8787DC14F4CD8A00286BF2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8787DB14F4CD8A00286BF2 /* Default.png */; };
 		BA8DF45014F3367800516CE0 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA8DF44F14F3367800516CE0 /* UserInfo.plist */; };
 		BADA5AAB14F1567800055344 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAA14F1567800055344 /* UIKit.framework */; };
 		BADA5AAD14F1567800055344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAC14F1567800055344 /* Foundation.framework */; };
@@ -27,14 +30,16 @@
 		BADA5ACD14F159A700055344 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5ACC14F159A700055344 /* LoginView.m */; };
 		BADA5AD414F15AA300055344 /* NSStreamAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5AD314F15AA300055344 /* NSStreamAdditions.m */; };
 		BADA5AD714F15E9000055344 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADA5AD614F15E9000055344 /* LoginViewController.m */; };
+		BAF99C3A14F413D3004C64E0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF99C3914F413D3004C64E0 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA17C44E14F3A3BE00B95509 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
+		BA17C45014F3B9B100B95509 /* grayedOut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayedOut.png; sourceTree = "<group>"; };
 		BA22DD9D14F186CC00572251 /* DrinkListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkListView.h; path = ../DrinkListView.h; sourceTree = "<group>"; };
 		BA22DD9E14F186CC00572251 /* DrinkListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkListView.m; path = ../DrinkListView.m; sourceTree = "<group>"; };
 		BA22DDA014F186DA00572251 /* DrinkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkListViewController.h; path = ../DrinkListViewController.h; sourceTree = "<group>"; };
 		BA22DDA114F186DB00572251 /* DrinkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkListViewController.m; path = ../DrinkListViewController.m; sourceTree = "<group>"; };
-		BA2B59AD14F3668C004A291E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BA2B59AF14F3668F004A291E /* logosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logosmall.png; sourceTree = "<group>"; };
 		BA38F08414F21E6600555C71 /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropView.h; path = ../DropView.h; sourceTree = "<group>"; };
 		BA38F08514F21E6600555C71 /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropView.m; path = ../DropView.m; sourceTree = "<group>"; };
@@ -43,6 +48,8 @@
 		BA4F1BF814F1DA5E00C03CA8 /* DrinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkCell.h; path = ../DrinkCell.h; sourceTree = "<group>"; };
 		BA4F1BF914F1DA5E00C03CA8 /* DrinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkCell.m; path = ../DrinkCell.m; sourceTree = "<group>"; };
 		BA4F1BFE14F1DA8300C03CA8 /* DrinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DrinkCell.xib; path = ../DrinkCell.xib; sourceTree = "<group>"; };
+		BA61245814F410EC00CD9A87 /* logo114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo114.png; sourceTree = "<group>"; };
+		BA8787DB14F4CD8A00286BF2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BA8DF44F14F3367800516CE0 /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserInfo.plist; path = ../UserInfo.plist; sourceTree = "<group>"; };
 		BADA5AA614F1567800055344 /* Drink5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drink5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADA5AAA14F1567800055344 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -63,6 +70,7 @@
 		BADA5AD314F15AA300055344 /* NSStreamAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStreamAdditions.m; sourceTree = "<group>"; };
 		BADA5AD514F15E9000055344 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BADA5AD614F15E9000055344 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BAF99C3914F413D3004C64E0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +90,10 @@
 		BADA5A9B14F1567500055344 = {
 			isa = PBXGroup;
 			children = (
+				BA8787DB14F4CD8A00286BF2 /* Default.png */,
 				BA2B59AF14F3668F004A291E /* logosmall.png */,
-				BA2B59AD14F3668C004A291E /* logo.png */,
+				BAF99C3914F413D3004C64E0 /* logo.png */,
+				BA61245814F410EC00CD9A87 /* logo114.png */,
 				BADA5AB014F1567800055344 /* Drink5 */,
 				BADA5AA914F1567800055344 /* Frameworks */,
 				BADA5AA714F1567800055344 /* Products */,
@@ -134,6 +144,8 @@
 				BADA5AB914F1567800055344 /* DrinkAppDelegate.h */,
 				BADA5ABA14F1567800055344 /* DrinkAppDelegate.m */,
 				BA8DF44F14F3367800516CE0 /* UserInfo.plist */,
+				BA17C45014F3B9B100B95509 /* grayedOut.png */,
+				BA17C44E14F3A3BE00B95509 /* icons */,
 				BADA5AB114F1567800055344 /* Supporting Files */,
 			);
 			path = Drink5;
@@ -204,8 +216,12 @@
 				BADA5ABE14F1567800055344 /* MainStoryboard.storyboard in Resources */,
 				BA4F1BFF14F1DA8300C03CA8 /* DrinkCell.xib in Resources */,
 				BA8DF45014F3367800516CE0 /* UserInfo.plist in Resources */,
-				BA2B59AE14F3668C004A291E /* logo.png in Resources */,
-				BA2B59B014F3668F004A291E /* logosmall.png in Resources */,
+				BA17C44F14F3A3BE00B95509 /* icons in Resources */,
+				BA17C45114F3B9B100B95509 /* grayedOut.png in Resources */,
+				BA61245914F410EC00CD9A87 /* logo114.png in Resources */,
+				BA61245A14F4116B00CD9A87 /* logosmall.png in Resources */,
+				BAF99C3A14F413D3004C64E0 /* logo.png in Resources */,
+				BA8787DC14F4CD8A00286BF2 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

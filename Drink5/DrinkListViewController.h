@@ -21,12 +21,17 @@
     UITableView *tableView;
     NSInteger *balance;
     UITableViewCell *drinkCell;
+    NSMutableDictionary *imageNames;
     
     NSMutableArray *drinkNames;
     NSMutableArray *drinkPrices;
     NSMutableArray *drinkQuantities;
     NSMutableArray *drinkSomethings;
 }
+
+@property (weak, nonatomic) IBOutlet UIImageView *drinkThumbnail;
+@property (weak, nonatomic) IBOutlet UIImageView *drinkThumbnailOverlay;
+
 
 @property (nonatomic, retain) NSMutableArray *drinkNames;
 @property (nonatomic, retain) NSMutableArray *drinkPrices;
@@ -51,6 +56,8 @@
 - (void) setSlotStats:(NSString *)stats;
 
 - (void) setBalance:(NSInteger *)balance;
+
+- (void) setMachineName:(NSString *)name;
 
 - (void) setup;
 @end

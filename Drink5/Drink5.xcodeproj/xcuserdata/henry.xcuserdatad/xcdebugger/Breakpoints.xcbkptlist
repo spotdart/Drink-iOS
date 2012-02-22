@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
          landmarkName = "-writeToServer:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351491482.56837"
+         timestampString = "351584326.887988"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "146"
-         endingLineNumber = "146"
+         startingLineNumber = "178"
+         endingLineNumber = "178"
          landmarkName = "-resetStreams"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
+         startingLineNumber = "113"
+         endingLineNumber = "113"
          landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -51,11 +51,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
          landmarkName = "-connectToServerUsingStream:portNo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -65,11 +65,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-loginWithName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -79,11 +79,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
          landmarkName = "-loginWithName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -93,91 +93,7 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
-         landmarkName = "-stream:handleEvent:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "72"
-         endingLineNumber = "72"
-         landmarkName = "-connectToServerUsingStream:portNo:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "57"
-         endingLineNumber = "57"
-         landmarkName = "-connectToServerUsingStream:portNo:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "74"
-         endingLineNumber = "74"
-         landmarkName = "@implementation DrinkViewController"
-         landmarkType = "3">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
-         landmarkName = "-stream:handleEvent:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
-         landmarkName = "-stream:handleEvent:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "103"
@@ -191,11 +107,95 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "77"
+         endingLineNumber = "77"
+         landmarkName = "-connectToServerUsingStream:portNo:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "62"
+         endingLineNumber = "62"
+         landmarkName = "-connectToServerUsingStream:portNo:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
+         landmarkName = "@implementation DrinkViewController"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
+         landmarkName = "-stream:handleEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
+         landmarkName = "-stream:handleEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "116"
+         endingLineNumber = "116"
+         landmarkName = "-stream:handleEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "112"
+         endingLineNumber = "112"
          landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -247,11 +247,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
          landmarkName = "-loginWithName:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -261,11 +261,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "46"
-         endingLineNumber = "46"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
          landmarkName = "@implementation DrinkViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -303,11 +303,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351537002.02945"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "167"
-         endingLineNumber = "167"
+         startingLineNumber = "226"
+         endingLineNumber = "226"
          landmarkName = "@implementation DrinkListViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -317,11 +317,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351532307.255331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "90"
-         endingLineNumber = "90"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
          landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
@@ -331,11 +331,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351537002.02945"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "119"
-         endingLineNumber = "119"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
          landmarkName = "-awakeFromNib"
          landmarkType = "5">
       </FileBreakpoint>
@@ -345,11 +345,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351532307.255331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "107"
-         endingLineNumber = "107"
+         startingLineNumber = "141"
+         endingLineNumber = "141"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -359,11 +359,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351532307.255331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "137"
+         endingLineNumber = "137"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -373,11 +373,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351532307.255331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "108"
-         endingLineNumber = "108"
+         startingLineNumber = "142"
+         endingLineNumber = "142"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -387,11 +387,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351537002.02945"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "149"
+         endingLineNumber = "149"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -401,11 +401,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351537002.02945"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "116"
-         endingLineNumber = "116"
+         startingLineNumber = "151"
+         endingLineNumber = "151"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -415,11 +415,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351532307.255331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "110"
-         endingLineNumber = "110"
+         startingLineNumber = "144"
+         endingLineNumber = "144"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -429,11 +429,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351537002.02945"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "145"
-         endingLineNumber = "145"
+         startingLineNumber = "180"
+         endingLineNumber = "180"
          landmarkName = "-tableView:numberOfRowsInSection:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -443,11 +443,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351481096.128522"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "130"
+         endingLineNumber = "130"
          landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -457,11 +457,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351481096.128522"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
+         startingLineNumber = "129"
+         endingLineNumber = "129"
          landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -471,11 +471,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105"
+         startingLineNumber = "118"
+         endingLineNumber = "118"
          landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -485,11 +485,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Drink5/DrinkViewController.m"
-         timestampString = "351419002.326998"
+         timestampString = "351536793.447725"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
+         startingLineNumber = "119"
+         endingLineNumber = "119"
          landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -499,11 +499,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351532307.255331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
+         startingLineNumber = "138"
+         endingLineNumber = "138"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -513,11 +513,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DrinkListViewController.m"
-         timestampString = "351496232.053451"
+         timestampString = "351532307.255331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105"
+         startingLineNumber = "139"
+         endingLineNumber = "139"
          landmarkName = "-setSlotStats:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -541,12 +541,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DropViewController.m"
-         timestampString = "351418748.082432"
+         timestampString = "351584732.671259"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "18"
-         endingLineNumber = "18"
-         landmarkName = "drinkName"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "slotToDrop"
          landmarkType = "19">
       </FileBreakpoint>
       <FileBreakpoint
@@ -715,6 +715,146 @@
          startingLineNumber = "43"
          endingLineNumber = "43"
          landmarkName = "-login:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "DrinkListViewController.m"
+         timestampString = "351532307.255331"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
+         landmarkName = "-setup"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "DrinkListViewController.m"
+         timestampString = "351532307.255331"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "121"
+         endingLineNumber = "121"
+         landmarkName = "-setup"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "DrinkListViewController.m"
+         timestampString = "351532307.255331"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
+         landmarkName = "-setup"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "DrinkListViewController.m"
+         timestampString = "351537002.02945"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "197"
+         endingLineNumber = "197"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "DrinkListViewController.m"
+         timestampString = "351537002.02945"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "222"
+         endingLineNumber = "222"
+         landmarkName = "-tableView:willSelectRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "DrinkListViewController.m"
+         timestampString = "351537002.02945"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "221"
+         endingLineNumber = "221"
+         landmarkName = "-tableView:willSelectRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
+         landmarkName = "-stream:handleEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351536793.447725"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
+         landmarkName = "-stream:handleEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351584326.887988"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "163"
+         endingLineNumber = "163"
+         landmarkName = "-stream:handleEvent:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Drink5/DrinkViewController.m"
+         timestampString = "351583823.959364"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "135"
+         endingLineNumber = "135"
+         landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
