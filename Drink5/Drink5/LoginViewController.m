@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "DrinkListViewController.h"
+#import "KeychainItemWrapper.h"
+
 
 @implementation LoginViewController
 @synthesize rememberMe;
@@ -18,6 +20,7 @@
 @synthesize loginSource;
 
 DrinkListViewController *drinkListViewController;
+KeychainItemWrapper *keychain;
 
 - (void)rightPass;
 {
@@ -40,22 +43,26 @@ DrinkListViewController *drinkListViewController;
     NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
     [path appendString:@"/UserInfo.plist"];
     //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
-    NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    if (plistDict == nil) {
-        plistDict = [[NSMutableDictionary alloc] init];
-    }
+    //NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    //if (plistDict == nil) {
+    //    plistDict = [[NSMutableDictionary alloc] init];
+    //}
     
     
     if (rememberMe.on) 
     {
-        [plistDict setValue:userField.text forKey:@"username"];
-        [plistDict setValue:passField.text forKey:@"password"];
-        [plistDict writeToFile:path atomically: YES];
+        [keychain setObject:userField.text forKey:(__bridge id)kSecAttrAccount];
+        [keychain setObject:passField.text forKey:(__bridge id)kSecValueData];
+        //[plistDict setValue:userField.text forKey:@"username"];
+        //[plistDict setValue:passField.text forKey:@"password"];
+        //[plistDict writeToFile:path atomically: YES];
 
     } else {
-        [plistDict setValue:@"" forKey:@"username"];
-        [plistDict setValue:@"" forKey:@"password"];
-        [plistDict writeToFile:path atomically: YES];
+        [keychain setObject:@"" forKey:(__bridge id)kSecAttrAccount];
+        [keychain setObject:@"" forKey:(__bridge id)kSecValueData];
+        //[plistDict setValue:@"" forKey:@"username"];
+        //[plistDict setValue:@"" forKey:@"password"];
+        //[plistDict writeToFile:path atomically: YES];
     }
     [self.loginSource loginWithName:userField.text];
     [self.loginSource loginWithPass:passField.text];
@@ -88,6 +95,7 @@ DrinkListViewController *drinkListViewController;
 */
 
 - (void)viewDidAppear:(BOOL)animated{
+    keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"DrinkLoginData" accessGroup:nil];
     //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
     NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
@@ -95,8 +103,10 @@ DrinkListViewController *drinkListViewController;
     
     NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     
-    userField.text = [plistDict objectForKey:@"username"];
-    passField.text = [plistDict objectForKey:@"password"];
+    userField.text = [keychain objectForKey:(__bridge id)kSecAttrAccount];
+    passField.text = [keychain objectForKey:(__bridge id)kSecValueData];
+    //userField.text = [plistDict objectForKey:@"username"];
+    //passField.text = [plistDict objectForKey:@"password"];
     
     if (![[plistDict objectForKey:@"username"] isEqualToString:@""]) {
         rememberMe.on = YES;

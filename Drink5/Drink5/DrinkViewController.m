@@ -12,6 +12,7 @@
 #import "DrinkListViewController.h"
 #import "DropViewController.h"
 
+
 @interface DrinkViewController() <DrinkLoginSource, DrinkListSource, DropSource>
 @end
 
@@ -22,6 +23,7 @@ BOOL loggedIn = NO;
 
 NSMutableData *data;
 NSInteger balance;
+
 
 @synthesize connectingStatus;
 @synthesize spinner;
@@ -176,6 +178,7 @@ DropViewController *dropViewController;
 - (void)resetStreams {
     suppressReset = YES;
     [self writeToServer:@"quit"];
+    loggedIn = NO;
     [inputStream close];
     [outputStream close];
     [self connectToServerUsingStream:@"drink.csh.rit.edu" portNo:4242];

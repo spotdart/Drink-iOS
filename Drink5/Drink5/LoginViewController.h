@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DrinkListViewController.h"
+#import "KeychainItemWrapper.h"
 
 @protocol DrinkLoginSource <DrinkListSource>
 - (void)loginWithName:(NSString *)userName;
@@ -18,7 +19,7 @@
 @interface LoginViewController : UIViewController {
     UITextField *userField;
     UITextField *passField;
-
+    KeychainItemWrapper *keychain;
     id <DrinkLoginSource> loginSource;
 }
 
@@ -29,7 +30,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *passField;
 
 @property (strong, nonatomic) IBOutlet UILabel *ErrorField;
-
 
 @property (nonatomic, strong) IBOutlet id <DrinkLoginSource> loginSource;
 

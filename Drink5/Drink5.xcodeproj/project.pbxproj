@@ -19,6 +19,8 @@
 		BA61245A14F4116B00CD9A87 /* logosmall.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2B59AF14F3668F004A291E /* logosmall.png */; };
 		BA8787DC14F4CD8A00286BF2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8787DB14F4CD8A00286BF2 /* Default.png */; };
 		BA8DF45014F3367800516CE0 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA8DF44F14F3367800516CE0 /* UserInfo.plist */; };
+		BAC24A7E14F5D15A003E7956 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC24A7D14F5D15A003E7956 /* KeychainItemWrapper.m */; };
+		BAC24A8014F5D1DB003E7956 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC24A7F14F5D1DB003E7956 /* Security.framework */; };
 		BADA5AAB14F1567800055344 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAA14F1567800055344 /* UIKit.framework */; };
 		BADA5AAD14F1567800055344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAC14F1567800055344 /* Foundation.framework */; };
 		BADA5AAF14F1567800055344 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA5AAE14F1567800055344 /* CoreGraphics.framework */; };
@@ -51,6 +53,9 @@
 		BA61245814F410EC00CD9A87 /* logo114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo114.png; sourceTree = "<group>"; };
 		BA8787DB14F4CD8A00286BF2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BA8DF44F14F3367800516CE0 /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = UserInfo.plist; path = ../UserInfo.plist; sourceTree = "<group>"; };
+		BAC24A7C14F5D15A003E7956 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		BAC24A7D14F5D15A003E7956 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		BAC24A7F14F5D1DB003E7956 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BADA5AA614F1567800055344 /* Drink5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drink5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADA5AAA14F1567800055344 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BADA5AAC14F1567800055344 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC24A8014F5D1DB003E7956 /* Security.framework in Frameworks */,
 				BADA5AAB14F1567800055344 /* UIKit.framework in Frameworks */,
 				BADA5AAD14F1567800055344 /* Foundation.framework in Frameworks */,
 				BADA5AAF14F1567800055344 /* CoreGraphics.framework in Frameworks */,
@@ -90,6 +96,7 @@
 		BADA5A9B14F1567500055344 = {
 			isa = PBXGroup;
 			children = (
+				BAC24A7F14F5D1DB003E7956 /* Security.framework */,
 				BA8787DB14F4CD8A00286BF2 /* Default.png */,
 				BA2B59AF14F3668F004A291E /* logosmall.png */,
 				BAF99C3914F413D3004C64E0 /* logo.png */,
@@ -145,6 +152,8 @@
 				BADA5ABA14F1567800055344 /* DrinkAppDelegate.m */,
 				BA8DF44F14F3367800516CE0 /* UserInfo.plist */,
 				BA17C45014F3B9B100B95509 /* grayedOut.png */,
+				BAC24A7C14F5D15A003E7956 /* KeychainItemWrapper.h */,
+				BAC24A7D14F5D15A003E7956 /* KeychainItemWrapper.m */,
 				BA17C44E14F3A3BE00B95509 /* icons */,
 				BADA5AB114F1567800055344 /* Supporting Files */,
 			);
@@ -243,6 +252,7 @@
 				BA4F1BFA14F1DA5E00C03CA8 /* DrinkCell.m in Sources */,
 				BA38F08614F21E6600555C71 /* DropView.m in Sources */,
 				BA445AAC14F23014007C660A /* DropViewController.m in Sources */,
+				BAC24A7E14F5D15A003E7956 /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
