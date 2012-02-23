@@ -31,10 +31,26 @@ NSInteger balance;
 @synthesize outputStream;
 
 
+
 LoginViewController *loginViewController;
 DrinkListViewController *drinkListViewController;
 DropViewController *dropViewController;
 
+KeychainItemWrapper *keychain;
+
+- (void)connectionError {
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Error!"
+                                                      message:@"Cannot communicate with Drink"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Disconnect"
+                                            otherButtonTitles:nil];
+    [message show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    exit(1);
+}
 
 -(void) writeToServer:(NSString*)string {
     NSLog(string);
@@ -85,6 +101,7 @@ DropViewController *dropViewController;
         case NSStreamEventErrorOccurred:
         {
             NSLog(@"Error Occurred");
+            [self connectionError];
             connectingStatus.text = @"Can't Connect!";
             spinner.hidesWhenStopped = YES;
             [spinner stopAnimating];
@@ -116,7 +133,11 @@ DropViewController *dropViewController;
                 
                 //HANDLE RESPONSE STRINGS
                 if ([received isEqualToString:@"Welcome to Big Drink\n"] && suppressReset == NO) {
-                    [self performSegueWithIdentifier:@"TransitionToLogin" sender:self];
+                        //loginViewController = [[LoginViewController alloc] init];
+                        //[loginViewController setLoginSource:self];
+                        //[self.navigationController pushViewController:loginViewController animated:NO];
+                        //[self performSegueWithIdentifier:@"noAnimationToLogin" sender:self];
+                        [self performSegueWithIdentifier:@"TransitionToLogin" sender:self];
                     //connected well!
                 }
                 if ([received isEqualToString:@"OK:  Welcome to Big Drink\r\n"]) {
@@ -182,6 +203,7 @@ DropViewController *dropViewController;
     [inputStream close];
     [outputStream close];
     [self connectToServerUsingStream:@"drink.csh.rit.edu" portNo:4242];
+    //[self connectToServerUsingStream:@"drink-dev.csh.rit.edu" portNo:4242];
 }
 
 - (void)viewDidLoad
@@ -190,11 +212,16 @@ DropViewController *dropViewController;
     [outputStream close];
     [spinner startAnimating];
     [self connectToServerUsingStream:@"drink.csh.rit.edu" portNo:4242];
+    //[self connectToServerUsingStream:@"drink-dev.csh.rit.edu" portNo:4242];
     [super viewDidLoad];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqualToString:@"noAnimationToLogin"]) {
+        loginViewController = segue.destinationViewController;
+        [segue.destinationViewController setLoginSource:self];
+    }
     if ([segue.identifier isEqualToString:@"TransitionToLogin"]) {
         loginViewController = segue.destinationViewController;
         [segue.destinationViewController setLoginSource:self];

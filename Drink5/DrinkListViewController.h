@@ -14,6 +14,12 @@
 - (void)getBalance:(id)sender;
 - (void)switchMachine:(id)sender: (NSString *)machine;
 - (void)resetStreams;
+- (void)loggedOut;
+- (void)connectionError;
+@end
+
+@protocol logoutSource <NSObject>
+- (void)logout;
 @end
 
 @interface DrinkListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
@@ -44,6 +50,7 @@
 
 @property (nonatomic, strong) IBOutlet id <DrinkListSource> listSource;
 
+@property (nonatomic, strong) IBOutlet id <logoutSource> logoutSource;
 
 @property (weak, nonatomic) IBOutlet UILabel *drinkName;
 

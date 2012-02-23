@@ -36,12 +36,20 @@ KeychainItemWrapper *keychain;
     [loginSource resetStreams];
 }
 
+- (void)logout
+{
+    [keychain setObject:@"" forKey:(__bridge id)kSecAttrAccount];
+    [keychain setObject:@"" forKey:(__bridge id)kSecValueData];
+    [loginSource resetStreams];
+    [userField becomeFirstResponder];
+}
+
 - (IBAction)login:(id)sender {
     //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
-    [path appendString:@"/UserInfo.plist"];
+    //NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
+    //[path appendString:@"/UserInfo.plist"];
     //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
     //NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     //if (plistDict == nil) {
@@ -94,35 +102,50 @@ KeychainItemWrapper *keychain;
 }
 */
 
-- (void)viewDidAppear:(BOOL)animated{
+
+- (void)viewWillAppear:(BOOL)animated
+{
     keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"DrinkLoginData" accessGroup:nil];
-    //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
-    NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
-    [path appendString:@"/UserInfo.plist"];
-    
-    NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    
     userField.text = [keychain objectForKey:(__bridge id)kSecAttrAccount];
     passField.text = [keychain objectForKey:(__bridge id)kSecValueData];
+    if (![[keychain objectForKey:(__bridge id)kSecAttrAccount] isEqualToString:@""]) {
+        rememberMe.on = YES;
+
+    } else {
+        rememberMe.on = NO;
+        [userField becomeFirstResponder];
+
+        [self.navigationItem setHidesBackButton:YES animated:YES];
+    }
+}
+- (void)viewDidAppear:(BOOL)animated{
+    if (![[keychain objectForKey:(__bridge id)kSecAttrAccount] isEqualToString:@""]) {
+        rememberMe.on = YES;
+        [self.loginSource loginWithName:[keychain objectForKey:(__bridge id)kSecAttrAccount]];
+        [self.loginSource loginWithPass:[keychain objectForKey:(__bridge id)kSecValueData]];
+    } else {
+        //rememberMe.on = NO;
+        //[userField becomeFirstResponder];
+        //userField.text = [keychain objectForKey:(__bridge id)kSecAttrAccount];
+        //passField.text = [keychain objectForKey:(__bridge id)kSecValueData];
+        //[self.navigationItem setHidesBackButton:YES animated:YES];
+    }
+    //keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"DrinkLoginData" accessGroup:nil];
+    //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
+    //NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
+    //[path appendString:@"/UserInfo.plist"];
+    
+    //NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     //userField.text = [plistDict objectForKey:@"username"];
     //passField.text = [plistDict objectForKey:@"password"];
     
-    if (![[plistDict objectForKey:@"username"] isEqualToString:@""]) {
-        rememberMe.on = YES;
-        [self.loginSource loginWithName:userField.text];
-        [self.loginSource loginWithPass:passField.text];
-    } else {
-                rememberMe.on = NO;
-    }
     //userField.text = @"";
     //passField.text = @"";
-    [userField becomeFirstResponder];
 }
 
 - (void)viewDidLoad
 {
-    [self.navigationItem setHidesBackButton:YES animated:YES];
     ErrorField.text = @"";
     //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -150,6 +173,7 @@ KeychainItemWrapper *keychain;
     if ([segue.identifier isEqualToString:@"LoggedInSuccessfully"]) {
         drinkListViewController = segue.destinationViewController;
         [segue.destinationViewController setListSource:loginSource];
+        [segue.destinationViewController setLogoutSource:self];
     }
 }
 

@@ -9,6 +9,8 @@
 #import "DropViewController.h"
 #import "DrinkListViewController.h"
 #import "DrinkCell.h"
+//#import "KeychainItemWrapper.h"
+//KeychainItemWrapper *keychain;
 
 @implementation DrinkListViewController
 
@@ -19,6 +21,7 @@
 @synthesize drinkCell;
 @synthesize tableViewArray;
 @synthesize tableView;
+@synthesize logoutSource;
 
 DropViewController *dropViewController;
 
@@ -27,13 +30,16 @@ NSString *machineName =@"Big Drink";
 NSString *slotStats;
 NSInteger *balance;
 
-
 @synthesize drinkThumbnail;
 @synthesize drinkThumbnailOverlay;
 @synthesize drinkNames;
 @synthesize drinkPrices;
 @synthesize drinkQuantities;
 @synthesize drinkSomethings;
+
+- (IBAction)dropConnection:(id)sender {
+    [listSource connectionError];
+}
 
 - (IBAction)switchToBigDrink:(id)sender {
     //machineName = @"Big Drink";
@@ -69,14 +75,17 @@ NSInteger *balance;
 #pragma mark - View lifecycle
 - (IBAction)logout:(id)sender {
     //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
-    NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
-    [path appendString:@"/UserInfo.plist"];
-    NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    [plistDict setValue:@"" forKey:@"username"];
-    [plistDict setValue:@"" forKey:@"password"];
-    [plistDict writeToFile:path atomically: YES];
-    [listSource resetStreams];
+    //NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
+    //[path appendString:@"/UserInfo.plist"];
+    //NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    //[plistDict setValue:@"" forKey:@"username"];
+    //[plistDict setValue:@"" forKey:@"password"];
+    //[keychain setObject:@"" forKey:(__bridge id)kSecAttrAccount];
+    //[keychain setObject:@"" forKey:(__bridge id)kSecValueData];
+    //[plistDict writeToFile:path atomically: YES];
+    [logoutSource logout];
+    //[listSource resetStreams];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

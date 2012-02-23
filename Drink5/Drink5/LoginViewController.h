@@ -10,7 +10,7 @@
 #import "DrinkListViewController.h"
 #import "KeychainItemWrapper.h"
 
-@protocol DrinkLoginSource <DrinkListSource>
+@protocol DrinkLoginSource <DrinkListSource, logoutSource>
 - (void)loginWithName:(NSString *)userName;
 - (void)loginWithPass:(NSString *)password;
 - (void)resetStreams;

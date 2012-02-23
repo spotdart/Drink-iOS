@@ -32,6 +32,7 @@
                         <outlet property="connectingStatus" destination="pF4-3T-ORE" id="Ybv-vg-qnU"/>
                         <outlet property="spinner" destination="qzP-oZ-5ED" id="mSW-qP-ebb"/>
                         <segue destination="M62-WB-qa9" kind="push" identifier="TransitionToLogin" id="968-CA-IMp"/>
+                        <segue destination="M62-WB-qa9" kind="custom" identifier="noAnimationToLogin" customClass="" id="opx-2n-spB"/>
                     </connections>
                 </viewController>
             </objects>
@@ -42,11 +43,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0v-Tn-OmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="M62-WB-qa9" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F3y-O4-Mss">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="nKt-qA-Ng9" customClass="LoginView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ukJ-6v-sMi">
@@ -124,18 +125,18 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1120" y="337"/>
+            <point key="canvasLocation" x="1176" y="337"/>
         </scene>
         <scene sceneID="VoA-s6-LJQ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsg-en-Dmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6bu-HK-DmI" customClass="DrinkListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LOQ-8g-gHp" customClass="DrinkListView">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wk7-oZ-DL3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -144,7 +145,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lF0-QW-RFh">
-                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Big Drink" width="97" id="NDL-l9-nyX">
@@ -187,7 +188,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlf-MU-7r9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="duX-he-AH7" customClass="DropViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QGu-bG-7Hs" customClass="DropView">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5fe-aD-ggD">
@@ -280,6 +281,7 @@
                 <relationship kind="outlet" name="drinkThumbnail" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="drinkThumbnailOverlay" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="listSource"/>
+                <relationship kind="outlet" name="logoutSource"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -322,4 +324,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="opx-2n-spB"/>
+    </inferredMetricsTieBreakers>
 </document>

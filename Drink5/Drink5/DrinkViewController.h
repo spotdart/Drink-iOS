@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "DropViewController.h"
+#import "KeychainItemWrapper.h"
 
-@interface DrinkViewController : UIViewController <NSStreamDelegate> {
+@interface DrinkViewController : UIViewController <NSStreamDelegate, UIAlertViewDelegate> {
     NSInputStream *inputStream;
     NSOutputStream *outputStream;
-    
+    KeychainItemWrapper *keychain;
 }
 @property (weak, nonatomic) IBOutlet UILabel *connectingStatus;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
