@@ -45,32 +45,14 @@ KeychainItemWrapper *keychain;
 }
 
 - (IBAction)login:(id)sender {
-    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    //NSString *documentsDirectory = [paths objectAtIndex:0];
-    //NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    //NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
-    //[path appendString:@"/UserInfo.plist"];
-    //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
-    //NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    //if (plistDict == nil) {
-    //    plistDict = [[NSMutableDictionary alloc] init];
-    //}
-    
-    
     if (rememberMe.on) 
     {
         [keychain setObject:userField.text forKey:(__bridge id)kSecAttrAccount];
         [keychain setObject:passField.text forKey:(__bridge id)kSecValueData];
-        //[plistDict setValue:userField.text forKey:@"username"];
-        //[plistDict setValue:passField.text forKey:@"password"];
-        //[plistDict writeToFile:path atomically: YES];
 
     } else {
         [keychain setObject:@"" forKey:(__bridge id)kSecAttrAccount];
         [keychain setObject:@"" forKey:(__bridge id)kSecValueData];
-        //[plistDict setValue:@"" forKey:@"username"];
-        //[plistDict setValue:@"" forKey:@"password"];
-        //[plistDict writeToFile:path atomically: YES];
     }
     [self.loginSource loginWithName:userField.text];
     [self.loginSource loginWithPass:passField.text];
@@ -124,24 +106,9 @@ KeychainItemWrapper *keychain;
         [self.loginSource loginWithName:[keychain objectForKey:(__bridge id)kSecAttrAccount]];
         [self.loginSource loginWithPass:[keychain objectForKey:(__bridge id)kSecValueData]];
     } else {
-        //rememberMe.on = NO;
-        //[userField becomeFirstResponder];
-        //userField.text = [keychain objectForKey:(__bridge id)kSecAttrAccount];
-        //passField.text = [keychain objectForKey:(__bridge id)kSecValueData];
-        //[self.navigationItem setHidesBackButton:YES animated:YES];
+
     }
-    //keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"DrinkLoginData" accessGroup:nil];
-    //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
-    //NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    //NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
-    //[path appendString:@"/UserInfo.plist"];
-    
-    //NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    //userField.text = [plistDict objectForKey:@"username"];
-    //passField.text = [plistDict objectForKey:@"password"];
-    
-    //userField.text = @"";
-    //passField.text = @"";
+
 }
 
 - (void)viewDidLoad
@@ -168,8 +135,6 @@ KeychainItemWrapper *keychain;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //userField.text = @"";
-    //passField.text = @"";
     if ([segue.identifier isEqualToString:@"LoggedInSuccessfully"]) {
         drinkListViewController = segue.destinationViewController;
         [segue.destinationViewController setListSource:loginSource];

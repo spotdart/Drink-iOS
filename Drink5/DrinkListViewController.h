@@ -7,6 +7,7 @@
 //
 
 #import "DropViewController.h"
+#import "DrinkItem.h"
 #import <UIKit/UIKit.h>
 
 @protocol DrinkListSource <DropSource>
@@ -29,20 +30,13 @@
     UITableViewCell *drinkCell;
     NSMutableDictionary *imageNames;
     
-    NSMutableArray *drinkNames;
-    NSMutableArray *drinkPrices;
-    NSMutableArray *drinkQuantities;
-    NSMutableArray *drinkSomethings;
+    NSMutableArray *drinkItems;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *drinkThumbnail;
 @property (weak, nonatomic) IBOutlet UIImageView *drinkThumbnailOverlay;
 
-
-@property (nonatomic, retain) NSMutableArray *drinkNames;
-@property (nonatomic, retain) NSMutableArray *drinkPrices;
-@property (nonatomic, retain) NSMutableArray *drinkQuantities;
-@property (nonatomic, retain) NSMutableArray *drinkSomethings;
+@property (nonatomic, retain) NSMutableArray *drinkItems;
 
 @property (nonatomic, retain) NSArray *tableViewArray;
 

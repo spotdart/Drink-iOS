@@ -11,6 +11,9 @@
 		BA17C45114F3B9B100B95509 /* grayedOut.png in Resources */ = {isa = PBXBuildFile; fileRef = BA17C45014F3B9B100B95509 /* grayedOut.png */; };
 		BA22DD9F14F186CC00572251 /* DrinkListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA22DD9E14F186CC00572251 /* DrinkListView.m */; };
 		BA22DDA214F186DB00572251 /* DrinkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA22DDA114F186DB00572251 /* DrinkListViewController.m */; };
+		BA274042150C1F5C000B8A44 /* vertical bar.png in Resources */ = {isa = PBXBuildFile; fileRef = BA274041150C1F5C000B8A44 /* vertical bar.png */; };
+		BA274045150C39F4000B8A44 /* DrinkItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA274044150C39F4000B8A44 /* DrinkItem.m */; };
+		BA274047150C4E81000B8A44 /* crossedOut.png in Resources */ = {isa = PBXBuildFile; fileRef = BA274046150C4E81000B8A44 /* crossedOut.png */; };
 		BA38F08614F21E6600555C71 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38F08514F21E6600555C71 /* DropView.m */; };
 		BA445AAC14F23014007C660A /* DropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA445AAB14F23013007C660A /* DropViewController.m */; };
 		BA4F1BFA14F1DA5E00C03CA8 /* DrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4F1BF914F1DA5E00C03CA8 /* DrinkCell.m */; };
@@ -42,6 +45,10 @@
 		BA22DD9E14F186CC00572251 /* DrinkListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkListView.m; path = ../DrinkListView.m; sourceTree = "<group>"; };
 		BA22DDA014F186DA00572251 /* DrinkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrinkListViewController.h; path = ../DrinkListViewController.h; sourceTree = "<group>"; };
 		BA22DDA114F186DB00572251 /* DrinkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrinkListViewController.m; path = ../DrinkListViewController.m; sourceTree = "<group>"; };
+		BA274041150C1F5C000B8A44 /* vertical bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vertical bar.png"; path = "../../../../Desktop/vertical bar.png"; sourceTree = "<group>"; };
+		BA274043150C39F4000B8A44 /* DrinkItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkItem.h; sourceTree = "<group>"; };
+		BA274044150C39F4000B8A44 /* DrinkItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkItem.m; sourceTree = "<group>"; };
+		BA274046150C4E81000B8A44 /* crossedOut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crossedOut.png; path = ../../../../Desktop/crossedOut.png; sourceTree = "<group>"; };
 		BA2B59AF14F3668F004A291E /* logosmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logosmall.png; sourceTree = "<group>"; };
 		BA38F08414F21E6600555C71 /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropView.h; path = ../DropView.h; sourceTree = "<group>"; };
 		BA38F08514F21E6600555C71 /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropView.m; path = ../DropView.m; sourceTree = "<group>"; };
@@ -137,6 +144,8 @@
 				BADA5ACC14F159A700055344 /* LoginView.m */,
 				BA22DDA014F186DA00572251 /* DrinkListViewController.h */,
 				BA22DDA114F186DB00572251 /* DrinkListViewController.m */,
+				BA274043150C39F4000B8A44 /* DrinkItem.h */,
+				BA274044150C39F4000B8A44 /* DrinkItem.m */,
 				BA22DD9D14F186CC00572251 /* DrinkListView.h */,
 				BA22DD9E14F186CC00572251 /* DrinkListView.m */,
 				BA4F1BFE14F1DA8300C03CA8 /* DrinkCell.xib */,
@@ -151,7 +160,9 @@
 				BADA5AB914F1567800055344 /* DrinkAppDelegate.h */,
 				BADA5ABA14F1567800055344 /* DrinkAppDelegate.m */,
 				BA8DF44F14F3367800516CE0 /* UserInfo.plist */,
+				BA274046150C4E81000B8A44 /* crossedOut.png */,
 				BA17C45014F3B9B100B95509 /* grayedOut.png */,
+				BA274041150C1F5C000B8A44 /* vertical bar.png */,
 				BAC24A7C14F5D15A003E7956 /* KeychainItemWrapper.h */,
 				BAC24A7D14F5D15A003E7956 /* KeychainItemWrapper.m */,
 				BA17C44E14F3A3BE00B95509 /* icons */,
@@ -231,6 +242,8 @@
 				BA61245A14F4116B00CD9A87 /* logosmall.png in Resources */,
 				BAF99C3A14F413D3004C64E0 /* logo.png in Resources */,
 				BA8787DC14F4CD8A00286BF2 /* Default.png in Resources */,
+				BA274042150C1F5C000B8A44 /* vertical bar.png in Resources */,
+				BA274047150C4E81000B8A44 /* crossedOut.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +266,7 @@
 				BA38F08614F21E6600555C71 /* DropView.m in Sources */,
 				BA445AAC14F23014007C660A /* DropViewController.m in Sources */,
 				BAC24A7E14F5D15A003E7956 /* KeychainItemWrapper.m in Sources */,
+				BA274045150C39F4000B8A44 /* DrinkItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

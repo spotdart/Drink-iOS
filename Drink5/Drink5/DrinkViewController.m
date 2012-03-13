@@ -133,10 +133,6 @@ KeychainItemWrapper *keychain;
                 
                 //HANDLE RESPONSE STRINGS
                 if ([received isEqualToString:@"Welcome to Big Drink\n"] && suppressReset == NO) {
-                        //loginViewController = [[LoginViewController alloc] init];
-                        //[loginViewController setLoginSource:self];
-                        //[self.navigationController pushViewController:loginViewController animated:NO];
-                        //[self performSegueWithIdentifier:@"noAnimationToLogin" sender:self];
                         [self performSegueWithIdentifier:@"TransitionToLogin" sender:self];
                     //connected well!
                 }

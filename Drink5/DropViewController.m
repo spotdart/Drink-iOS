@@ -22,6 +22,7 @@
 
 - (IBAction)drop:(id)sender {
     [statusSpinner startAnimating];
+    statusField.textColor = [UIColor blackColor];
     statusField.text = @"dispensing...";
     [dropSource dropFromSlot:slotToDrop];
 }

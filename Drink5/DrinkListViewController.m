@@ -32,10 +32,8 @@ NSInteger *balance;
 
 @synthesize drinkThumbnail;
 @synthesize drinkThumbnailOverlay;
-@synthesize drinkNames;
-@synthesize drinkPrices;
-@synthesize drinkQuantities;
-@synthesize drinkSomethings;
+
+@synthesize drinkItems;
 
 - (IBAction)dropConnection:(id)sender {
     [listSource connectionError];
@@ -74,18 +72,7 @@ NSInteger *balance;
 
 #pragma mark - View lifecycle
 - (IBAction)logout:(id)sender {
-    //NSString *path = [[NSBundle mainBundle] pathForResource:@"UserInfo" ofType:@"plist"];
-    //NSArray *savePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    //NSMutableString *path = [NSMutableString stringWithString:[savePaths objectAtIndex:0]];
-    //[path appendString:@"/UserInfo.plist"];
-    //NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    //[plistDict setValue:@"" forKey:@"username"];
-    //[plistDict setValue:@"" forKey:@"password"];
-    //[keychain setObject:@"" forKey:(__bridge id)kSecAttrAccount];
-    //[keychain setObject:@"" forKey:(__bridge id)kSecValueData];
-    //[plistDict writeToFile:path atomically: YES];
     [logoutSource logout];
-    //[listSource resetStreams];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -102,9 +89,7 @@ NSInteger *balance;
 - (void)setup
 {
     NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSFileManager *fm = [NSFileManager defaultManager];
     NSString *logosPath = [[NSString alloc] initWithFormat:@"%@/icons",path];
-    NSArray *dirContents = [fm contentsOfDirectoryAtPath:logosPath error:nil];
     imageNames = [[NSMutableDictionary alloc] init];
     [imageNames setValue:[[NSString alloc] initWithFormat:@"%@/coke.png",logosPath] forKey:@"Coke"];
     [imageNames setValue:[[NSString alloc] initWithFormat:@"%@/jolt_orange.png",logosPath] forKey:@"JOLT Orange"];
@@ -126,34 +111,33 @@ NSInteger *balance;
     
     [imageNames setValue:[[NSString alloc] initWithFormat:@"%@/default_icon.png",logosPath] forKey:@"default"];
     
-    [imageNames setValue:[[NSString alloc] initWithFormat:@"%@/grayedOut.png",path] forKey:@"grayedOut"];
+    [imageNames setValue:[[NSString alloc] initWithFormat:@"%@/crossedOut.png",path] forKey:@"grayedOut"];
     [self.navigationItem setHidesBackButton:YES animated:YES];
-    //NSArray *array = [[NSArray alloc] initWithObjects:@"Apple",@"Microsoft",@"Samsung",nil];
-    //self.tableViewArray = array;
-    //[listSource getBalance:self];
-    //[tableView reloadData];
 }
 
 - (void) setSlotStats:(NSString *)stats {
     NSLog(@"got stats");
     NSLog(stats);
     NSArray *array = [[NSArray alloc] initWithArray:[stats componentsSeparatedByString:@"\n"]];
-    NSMutableArray *mutDrinkNames = [[NSMutableArray alloc] init];
-    NSMutableArray *mutDrinkPrices = [[NSMutableArray alloc] init];
-    NSMutableArray *mutDrinkQuantities = [[NSMutableArray alloc] init];
-    NSMutableArray *mutDrinkSomethings = [[NSMutableArray alloc] init];
-    for( int i = 0; i < [array count] - 2; i++) {
+    NSMutableArray *mutDrinkItems = [[NSMutableArray alloc] init];
+    for( NSInteger i = 0; i < [array count] - 2; i++) {
+        DrinkItem *drinkItem = [[DrinkItem alloc] init];
         NSArray *quoteArray = [[NSArray alloc] initWithArray:[[array objectAtIndex:i] componentsSeparatedByString:@"\""]];
         NSArray *tempArray = [[NSArray alloc] initWithArray:[[quoteArray objectAtIndex:2] componentsSeparatedByString:@" "]];
-        [mutDrinkNames addObject:[quoteArray objectAtIndex:1]];
-        [mutDrinkPrices addObject:[tempArray objectAtIndex:1]];
-        [mutDrinkQuantities addObject:[tempArray objectAtIndex:2]];
-        [mutDrinkSomethings addObject:[tempArray objectAtIndex:3]];
+        drinkItem.name = [quoteArray objectAtIndex:1];
+        drinkItem.price = [tempArray objectAtIndex:1];
+        drinkItem.quantity = [tempArray objectAtIndex:2];
+        drinkItem.something = [tempArray objectAtIndex:3];
+        drinkItem.row = i + 1;
+        [mutDrinkItems addObject:drinkItem];
          }
-    drinkNames = mutDrinkNames;
-    drinkPrices = mutDrinkPrices;
-    drinkQuantities = mutDrinkQuantities;
-    drinkSomethings = mutDrinkSomethings;
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"quantity" ascending:NO];
+    NSArray *descriptors = [NSArray arrayWithObject:sortDescriptor];
+    drinkItems = [mutDrinkItems sortedArrayUsingDescriptors:descriptors];
+
+    
+    
     
     NSLog(@"slot stats set");
     [listSource getBalance:self];
@@ -186,7 +170,7 @@ NSInteger *balance;
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [drinkNames count];
+    return [drinkItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)
@@ -203,9 +187,14 @@ indexPath
         }
     }
     NSUInteger row = [indexPath row];
-    drinkPrice.text = [NSString stringWithFormat:@"%@ credits", [drinkPrices objectAtIndex:row]];
-    drinkQuantity.text = [NSString stringWithFormat:@"%@ left", [drinkQuantities objectAtIndex:row]];
-    drinkName.text = [drinkNames objectAtIndex:row];
+    
+    drinkPrice.text = [NSString stringWithFormat:@"%@Ȼ", [[drinkItems objectAtIndex:row] price]];
+    drinkQuantity.text = [NSString stringWithFormat:@"%@ stocked", [[drinkItems objectAtIndex:row] quantity]];
+    drinkName.text = [[drinkItems objectAtIndex:row] name];
+    
+    //drinkPrice.text = [NSString stringWithFormat:@"%@ credits", [drinkPrices objectAtIndex:row]];
+    //drinkQuantity.text = [NSString stringWithFormat:@"%@ remain", [drinkQuantities objectAtIndex:row]];
+    //drinkName.text = [drinkNames objectAtIndex:row];
     UIImage *thumbNailImage = [[UIImage alloc] initWithContentsOfFile:[imageNames objectForKey:drinkName.text]];
     if (thumbNailImage == nil) {
         thumbNailImage = [[UIImage alloc] initWithContentsOfFile:[imageNames objectForKey:@"default"]];
@@ -213,7 +202,7 @@ indexPath
         drinkThumbnail.image = thumbNailImage;
     
     
-    NSInteger quantity = [[drinkQuantities objectAtIndex:row] intValue];
+    NSInteger quantity = [[[drinkItems objectAtIndex:row] quantity] intValue];
     if (quantity <= 0) {
         drinkPrice.textColor = [UIColor grayColor];
         drinkName.textColor = [UIColor grayColor];
@@ -226,7 +215,7 @@ indexPath
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger row = [indexPath row];
-    NSInteger quantity = [[drinkQuantities objectAtIndex:row] intValue];
+    NSInteger quantity = [[[drinkItems objectAtIndex:row] quantity] intValue];
     if (quantity <= 0) {
         return nil;
     }
@@ -237,11 +226,11 @@ indexPath
 {
     NSUInteger row = [indexPath row];
     [self performSegueWithIdentifier:@"TransitionToDrop" sender:self];
-    [dropViewController setDrinkName:[drinkNames objectAtIndex:row]];
-    UIImage *itemIcon = [[UIImage alloc] initWithContentsOfFile:[imageNames objectForKey:[drinkNames objectAtIndex:row]]];
+    [dropViewController setDrinkName:[[drinkItems objectAtIndex:row] name]];
+    UIImage *itemIcon = [[UIImage alloc] initWithContentsOfFile:[imageNames objectForKey:[[drinkItems objectAtIndex:row] name]]];
     if (itemIcon == nil) itemIcon = [[UIImage alloc] initWithContentsOfFile:[imageNames objectForKey:@"default"]];
     dropViewController.itemIcon.image = itemIcon;
-    [dropViewController setSlotToDrop:row + 1];
+    [dropViewController setSlotToDrop:[[drinkItems objectAtIndex:row] row]];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
