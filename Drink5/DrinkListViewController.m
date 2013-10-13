@@ -192,7 +192,7 @@ indexPath
     }
     NSUInteger row = [indexPath row];
     
-    drinkPrice.text = [NSString stringWithFormat:@"%@Ȼ", [[drinkItems objectAtIndex:row] price]];
+    drinkPrice.text = [NSString stringWithFormat:@"%@ credits", [[drinkItems objectAtIndex:row] price]];
     drinkQuantity.text = [NSString stringWithFormat:@"%@ stocked", [[drinkItems objectAtIndex:row] quantity]];
     drinkName.text = [[drinkItems objectAtIndex:row] name];
     

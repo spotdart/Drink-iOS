@@ -206,6 +206,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				TargetAttributes = {
+					BADA5AA514F1567800055344 = {
+						DevelopmentTeam = DB528TET77;
+					};
+				};
 			};
 			buildConfigurationList = BADA5AA014F1567500055344 /* Build configuration list for PBXProject "Drink5" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -336,11 +341,14 @@
 		BADA5AC514F1567800055344 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Drink5/Drink5-Prefix.pch";
 				INFOPLIST_FILE = "Drink5/Drink5-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -348,11 +356,14 @@
 		BADA5AC614F1567800055344 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Drink5/Drink5-Prefix.pch";
 				INFOPLIST_FILE = "Drink5/Drink5-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
