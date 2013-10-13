@@ -20,7 +20,7 @@
 @synthesize drinkQuantity;
 @synthesize drinkCell;
 @synthesize tableViewArray;
-@synthesize tableView;
+@synthesize tableView = _tableView;
 @synthesize logoutSource;
 
 DropViewController *dropViewController;
@@ -41,17 +41,17 @@ NSInteger *balance;
 
 - (IBAction)switchToBigDrink:(id)sender {
     //machineName = @"Big Drink";
-    [listSource switchMachine:self :@"d"];
+    [listSource switchMachine:@"d" fromSender:self];
 }
 
 - (IBAction)switchToLittleDrink:(id)sender {
     //machineName = @"Little Drink";
-    [listSource switchMachine:self :@"ld"];
+    [listSource switchMachine:@"ld" fromSender:self];
 }
 
 - (IBAction)switchToSnack:(id)sender {
     //machineName = @"Snack";
-    [listSource switchMachine:self :@"s"];
+    [listSource switchMachine:@"s" fromSender:self];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -79,7 +79,7 @@ NSInteger *balance;
 
 - (void) setBalance:(NSInteger *)balanceP {
     balance = balanceP;
-    [tableView reloadData];
+    [_tableView reloadData];
 }
 
 - (void) setMachineName:(NSString *)nameP {
@@ -117,7 +117,7 @@ NSInteger *balance;
 
 - (void) setSlotStats:(NSString *)stats {
     NSLog(@"got stats");
-    NSLog(stats);
+    NSLog(@"%@", stats);
     NSArray *array = [[NSArray alloc] initWithArray:[stats componentsSeparatedByString:@"\n"]];
     NSMutableArray *mutDrinkItems = [[NSMutableArray alloc] init];
     for( NSInteger i = 0; i < [array count] - 2; i++) {
@@ -134,7 +134,7 @@ NSInteger *balance;
     NSSortDescriptor *sortDescriptor;
     sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"quantity" ascending:NO];
     NSArray *descriptors = [NSArray arrayWithObject:sortDescriptor];
-    drinkItems = [mutDrinkItems sortedArrayUsingDescriptors:descriptors];
+    drinkItems = [mutDrinkItems sortedArrayUsingDescriptors:descriptors].mutableCopy;
 
     
     
@@ -152,6 +152,10 @@ NSInteger *balance;
 - (void)viewDidLoad:(BOOL)animated
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

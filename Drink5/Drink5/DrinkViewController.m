@@ -30,8 +30,6 @@ NSInteger balance;
 @synthesize inputStream;
 @synthesize outputStream;
 
-
-
 LoginViewController *loginViewController;
 DrinkListViewController *drinkListViewController;
 DropViewController *dropViewController;
@@ -53,8 +51,8 @@ KeychainItemWrapper *keychain;
 }
 
 -(void) writeToServer:(NSString*)string {
-    NSLog(string);
-    NSInteger bytes = [outputStream write:(const uint8_t *)[string UTF8String] maxLength:[string length]];
+    NSLog(@"%@", string);
+    [outputStream write:(const uint8_t *)[string UTF8String] maxLength:[string length]];
 }
 
 - (void)loginWithName:(NSString *)userName
@@ -74,29 +72,27 @@ KeychainItemWrapper *keychain;
 }
 
 -(void) connectToServerUsingStream:(NSString *)urlStr portNo: (uint) portNo {
-    NSInputStream *inputStream;
-    NSOutputStream *outputStream;
+    NSInputStream *thisInputStream;
+    NSOutputStream *thisOutputStream;
     NSLog(@"connecting...?");
     if (![urlStr isEqualToString:@""]) {
-        NSURL *website = [NSURL URLWithString:urlStr];
         [NSStream getStreamsToHostNamed:urlStr 
                                    port:portNo 
-                            inputStream:&inputStream
-                           outputStream:&outputStream];
-        [inputStream setDelegate:self];
-        [outputStream setDelegate:self];
-        [inputStream scheduleInRunLoop:[NSRunLoop mainRunLoop]
+                            inputStream:&thisInputStream
+                           outputStream:&thisOutputStream];
+        [thisInputStream setDelegate:self];
+        [thisOutputStream setDelegate:self];
+        [thisInputStream scheduleInRunLoop:[NSRunLoop mainRunLoop]
                            forMode:NSDefaultRunLoopMode];
-        [outputStream scheduleInRunLoop:[NSRunLoop mainRunLoop]
+        [thisOutputStream scheduleInRunLoop:[NSRunLoop mainRunLoop]
                            forMode:NSDefaultRunLoopMode];
-        [outputStream open];
-        [inputStream open];
+        [thisOutputStream open];
+        [thisInputStream open];
     } 
 }
 
 
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode {
-    NSStreamStatus status = [stream streamStatus];
     switch(eventCode) {
         case NSStreamEventErrorOccurred:
         {
@@ -109,7 +105,7 @@ KeychainItemWrapper *keychain;
         }
         case NSStreamEventHasSpaceAvailable:
         {
-            outputStream = stream;
+            outputStream = (NSOutputStream*)stream;
             NSLog(@"has space available");
             break;
         }
@@ -129,7 +125,7 @@ KeychainItemWrapper *keychain;
                 bytesRead += len;
                 NSLog(@"read bytes");   
                 NSString *received = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-                NSLog(received);
+                NSLog(@"%@", received);
                 
                 //HANDLE RESPONSE STRINGS
                 if ([received isEqualToString:@"Welcome to Big Drink\n"] && suppressReset == NO) {
@@ -187,7 +183,9 @@ KeychainItemWrapper *keychain;
                 NSRegularExpression *slotRegex = [NSRegularExpression regularExpressionWithPattern:@"1 \".*" options:nil error:&error];
                 rangeOfFirstMatch = [slotRegex rangeOfFirstMatchInString:received options:0 range:NSMakeRange(0, [received length])];
                     if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0)))[drinkListViewController setSlotStats:received];
-            }        
+            }
+        default:
+            break;
         } break;
     }
 }
@@ -204,6 +202,10 @@ KeychainItemWrapper *keychain;
 
 - (void)viewDidLoad
 {
+    self.navigationController.navigationBar.translucent = NO;
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     [inputStream close];
     [outputStream close];
     [spinner startAnimating];
@@ -233,9 +235,15 @@ KeychainItemWrapper *keychain;
     [self writeToServer:@"getbalance"];
      }
 
-- (void)switchMachine:(id)sender: (NSString *)machine {
+- (void)switchMachine: (NSString *)machine fromSender:(id)sender {
     [self writeToServer:[NSString stringWithFormat:@"machine %@", machine]];
     [sender setup];
+}
+
+- (void) logout {
+}
+
+- (void) loggedOut {
 }
 
 - (void)dropFromSlot:(NSInteger)slotToDrop {

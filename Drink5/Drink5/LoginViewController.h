@@ -16,7 +16,7 @@
 - (void)resetStreams;
 @end
 
-@interface LoginViewController : UIViewController {
+@interface LoginViewController : UIViewController<logoutSource> {
     UITextField *userField;
     UITextField *passField;
     KeychainItemWrapper *keychain;

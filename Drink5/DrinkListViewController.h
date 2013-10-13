@@ -13,7 +13,7 @@
 @protocol DrinkListSource <DropSource>
 - (void)getDrinkStats;
 - (void)getBalance:(id)sender;
-- (void)switchMachine:(id)sender: (NSString *)machine;
+- (void)switchMachine: (NSString *)machine fromSender:(id)sender;
 - (void)resetStreams;
 - (void)loggedOut;
 - (void)connectionError;
@@ -25,8 +25,7 @@
 
 @interface DrinkListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     NSArray *tableViewArray;
-    UITableView *tableView;
-    NSInteger *balance;
+    NSInteger balance;
     UITableViewCell *drinkCell;
     NSMutableDictionary *imageNames;
     

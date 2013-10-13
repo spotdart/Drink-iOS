@@ -113,10 +113,14 @@ KeychainItemWrapper *keychain;
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     ErrorField.text = @"";
+    self.navigationController.navigationBar.translucent = NO;
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //NSString *documentsDirectory = [paths objectAtIndex:0];
-    [super viewDidLoad];
 }
 
 - (void)viewDidUnload

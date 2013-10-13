@@ -36,6 +36,15 @@
     return self;
 }
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    
+    self.navigationController.navigationBar.translucent = NO;
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     nameLabel.text = drinkName;
     statusSpinner.hidesWhenStopped = YES;

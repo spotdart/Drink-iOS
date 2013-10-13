@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="1PB-Go-3F2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="1PB-Go-3F2">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Drink View Controller-->
         <scene sceneID="5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="DrinkViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Connecting...." lineBreakMode="tailTruncation" minimumFontSize="10" id="pF4-3T-ORE">
@@ -34,16 +32,16 @@
                         <outlet property="connectingStatus" destination="pF4-3T-ORE" id="Ybv-vg-qnU"/>
                         <outlet property="spinner" destination="qzP-oZ-5ED" id="mSW-qP-ebb"/>
                         <segue destination="M62-WB-qa9" kind="push" identifier="TransitionToLogin" id="968-CA-IMp"/>
-                        <segue destination="M62-WB-qa9" kind="custom" identifier="noAnimationToLogin" customClass="" id="opx-2n-spB"/>
+                        <segue destination="M62-WB-qa9" kind="push" identifier="noAnimationToLogin" customClass="" id="opx-2n-spB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="730" y="337"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="rTa-VZ-v1A">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i0v-Tn-OmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="M62-WB-qa9" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F3y-O4-Mss">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -68,13 +66,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1QD-IQ-wIH">
                                         <rect key="frame" x="93" y="159" width="134" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Log In">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="login:" destination="M62-WB-qa9" eventType="touchUpInside" id="1Jq-YZ-vxf"/>
@@ -95,7 +88,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Ebk-qI-lpk">
-                                        <rect key="frame" x="221" y="98" width="79" height="27"/>
+                                        <rect key="frame" x="221" y="98" width="51" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </switch>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Log Me in Automatically" lineBreakMode="tailTruncation" minimumFontSize="10" id="C5T-LF-gUx">
@@ -119,7 +112,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="U63-fi-IvP"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="ErrorField" destination="mNP-CX-FaA" id="udt-Re-6g3"/>
                         <outlet property="passField" destination="O8k-0j-5Ub" id="7I9-DZ-KeK"/>
@@ -128,19 +121,19 @@
                         <segue destination="6bu-HK-DmI" kind="push" identifier="LoggedInSuccessfully" id="J6M-Zx-07U"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0v-Tn-OmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1176" y="337"/>
         </scene>
         <!--Drink List View Controller - Choices-->
         <scene sceneID="VoA-s6-LJQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rsg-en-Dmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6bu-HK-DmI" customClass="DrinkListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LOQ-8g-gHp" customClass="DrinkListView">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wk7-oZ-DL3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wk7-oZ-DL3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,13 +178,13 @@
                         <segue destination="duX-he-AH7" kind="push" identifier="TransitionToDrop" id="cyB-6x-zJQ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsg-en-Dmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1574" y="343"/>
         </scene>
         <!--Drop View Controller - Drop it-->
         <scene sceneID="00Y-Ip-eVl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xlf-MU-7r9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="duX-he-AH7" customClass="DropViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QGu-bG-7Hs" customClass="DropView">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -210,11 +203,7 @@
                                 <color key="backgroundColor" red="1" green="0.72715529039662807" blue="0.18521855589802938" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="drop:" destination="duX-he-AH7" eventType="touchUpInside" id="V99-6K-ejX"/>
@@ -253,13 +242,13 @@
                         <outlet property="statusSpinner" destination="ArY-r7-niu" id="78t-y3-l8O"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlf-MU-7r9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1975" y="343"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hKT-8D-nNy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bvU-vi-fPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="1PB-Go-3F2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rBZ-m1-PkR">
@@ -271,62 +260,11 @@
                         <segue destination="2" kind="relationship" relationship="rootViewController" id="Koo-Pk-gby"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvU-vi-fPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="204" y="337"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DrinkListView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkListView.h"/>
-        </class>
-        <class className="DrinkListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="drinkCell" candidateClass="UITableViewCell"/>
-                <relationship kind="outlet" name="drinkName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="drinkPrice" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="drinkQuantity" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="drinkThumbnail" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="drinkThumbnailOverlay" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="listSource"/>
-                <relationship kind="outlet" name="logoutSource"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="DrinkViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrinkViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="connectingStatus" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-        <class className="DropView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DropView.h"/>
-        </class>
-        <class className="DropViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DropViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dropSource"/>
-                <relationship kind="outlet" name="itemIcon" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statusField" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statusSpinner" candidateClass="UIActivityIndicatorView"/>
-            </relationships>
-        </class>
-        <class className="LoginView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginView.h"/>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ErrorField" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="loginSource"/>
-                <relationship kind="outlet" name="passField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="rememberMe" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="userField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
