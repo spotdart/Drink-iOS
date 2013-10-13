@@ -168,7 +168,7 @@ KeychainItemWrapper *keychain;
                         }
                         loggedIn = YES;
                         NSArray *array = [[NSArray alloc] initWithArray:[received componentsSeparatedByString:@" "]];
-                        balance = [[array objectAtIndex:1] intValue];
+                        balance = [array[1] intValue];
                         [drinkListViewController setBalance:balance];
                     }
                 NSRegularExpression *errorRegex = [NSRegularExpression regularExpressionWithPattern:@"ERR.*" options:nil error:&error];
